@@ -1,0 +1,4 @@
+{	authentication:string	name:string	price:integer	type:string	url:string	}
+{	oauth	Asana	0	productivity	https://developers.asana.com/docs	}
+{	oauth	ClickUp	0	productivity	https://clickup.com/api/	}
+{	oauth;basic	Atlassian	0	productivity	https://developer.atlassian.com/server/jira/platform/rest-apis/	}
