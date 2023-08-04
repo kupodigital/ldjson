@@ -51,6 +51,8 @@ class LightweightDataJson
         foreach ($data as $k => $value) {
             $body .= "\x0A{\x09";
             
+            ksort($value);
+
             foreach ($value as $subKey => $subValue) {
                 if ($t === 0) {
                     $header[] = "{$subKey}:" . gettype($subValue);
