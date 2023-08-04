@@ -11,7 +11,6 @@ The LD-JSON format can be used similarly to CSV or TSV files, with the added adv
 The basic syntax of LD-JSON involves a header that defines data types, followed by data objects, each representing a set of related values. Data types are indicated in the header after the ":" symbol.
 
 
-
 ## Examples
 
 Here are examples of data before and after being encoded in the LD-JSON format:
