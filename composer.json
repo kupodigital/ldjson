@@ -2,7 +2,7 @@
     "name": "kupodigital/ldjson",
     "description": "LightweightDataJson - A lightweight utility for encoding and decoding data in the .ld-json format.",
     "type": "library",
-    "license": "MIT License",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "KupoDigital\\Data\\": "src/"
