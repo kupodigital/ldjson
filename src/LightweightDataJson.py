@@ -1,3 +1,18 @@
+"""
+ * LightweightDataJson - A lightweight utility for encoding and decoding data in the .ld-json format.
+ *
+ * This class provides methods to encode PHP arrays into .ld-json format and decode .ld-json data into PHP arrays.
+ * It can be used as open source software under the terms of the MIT License.
+ * When utilizing this code, please provide appropriate attribution to the author.
+ *
+ * @package   LightweightDataJson
+ * @category  Utility
+ * @version   1.0.0
+ * @license   MIT License (https://opensource.org/licenses/MIT)
+ * @author    Weslley Alves
+ * @link      https://github.com/kupodigital/ldjson
+"""
+
 class LightweightDataJson:
     
     def decode(data: str) -> list:
@@ -5,15 +20,13 @@ class LightweightDataJson:
         header = []
         result = []
 
-        # Encontrar a primeira linha não vazia para extrair os cabeçalhos
         for line in lines:
-            if line.strip():  # Verificar se a linha não está vazia
+            if line.strip():
                 header = [item.split(":")[0] for item in map(str.strip, line.strip("{}").split("\t"))]
                 break
 
-        # Processar os dados após o cabeçalho
         for i in range(1, len(lines)):
-            if not lines[i].strip():  # Ignorar linhas vazias
+            if not lines[i].strip():
                 continue
             values = list(map(str.strip, lines[i].strip("{}").split("\t")))
             obj = {}
